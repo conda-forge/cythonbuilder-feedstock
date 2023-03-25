@@ -12,8 +12,8 @@ source:
 build:
   noarch: python
   entry_points:
-    - cythonbuilder=cythonbuilder.cli:main
-    - cybuilder=cythonbuilder.cli:main
+    - cythonbuilder=cythonbuilder.cli:app
+    - cybuilder=cythonbuilder.cli:app
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
