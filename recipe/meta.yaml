@@ -1,5 +1,5 @@
 {% set name = "cythonbuilder" %}
-{% set version = "0.1.13" %}
+{% set version = "0.1.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cythonbuilder-{{ version }}.tar.gz
-  sha256: 7c8751d9b82aa2754a05ba3eb7e19b48672db2bc7ff4e6f6307c1db55d3bf6f1
+  sha256: c6e92e83bf43f3de5cb1a5791136e5a3285b996d515133085ea4d50ca4077a69
 
 build:
   noarch: python
   entry_points:
-    - cythonbuilder=cythonbuilder.cli:main
-    - cybuilder=cythonbuilder.cli:main
+    - cythonbuilder=cythonbuilder.cli:app
+    - cybuilder=cythonbuilder.cli:app
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
@@ -25,6 +25,7 @@ requirements:
     - python >=3.6
     - cython
     - coloredlogs
+    - typer
 
 test:
   imports:
