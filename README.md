@@ -1,11 +1,11 @@
-About cythonbuilder
-===================
+About cythonbuilder-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cythonbuilder-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/mike-huls/cythonbuilder
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cythonbuilder-feedstock/blob/main/LICENSE.txt)
 
 Summary: CythonBuilder; automated compiling and packaging of Cython code
 
