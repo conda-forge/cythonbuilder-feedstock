@@ -43,7 +43,7 @@ about:
   summary: CythonBuilder; automated compiling and packaging of Cython code
   dev_url: https://github.com/mike-huls/cythonbuilder/
   license: MIT
-  license_file: license.txt
+  license_file: LICENSE.txt
 
 extra:
   recipe-maintainers:
