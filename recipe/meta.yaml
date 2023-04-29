@@ -1,5 +1,5 @@
 {% set name = "cythonbuilder" %}
-{% set version = "0.1.15" %}
+{% set version = "0.1.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cythonbuilder-{{ version }}.tar.gz
-  sha256: c6e92e83bf43f3de5cb1a5791136e5a3285b996d515133085ea4d50ca4077a69
+  sha256: 86568d75705ed669103064a154c78caeb0b62293e3505714c501521fbe901e29
 
 build:
   noarch: python
@@ -19,13 +19,15 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9, <4.0
+    - poetry
+    - poetry-core
     - pip
   run:
-    - python >=3.6
-    - cython
+    - python >=3.9, <4.0
+    - cython >=0.29.28, <0.30.0
+    - typer >=0.7.0, <0.8.0
     - coloredlogs
-    - typer
 
 test:
   imports:
@@ -42,7 +44,7 @@ about:
   summary: CythonBuilder; automated compiling and packaging of Cython code
   dev_url: https://github.com/mike-huls/cythonbuilder/
   license: MIT
-  license_file: license.txt
+  license_file: LICENSE.txt
 
 extra:
   recipe-maintainers:
