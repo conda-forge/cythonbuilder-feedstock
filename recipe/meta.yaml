@@ -27,6 +27,7 @@ requirements:
     - python >=3.9, <4.0
     - cython >=0.29.28, <0.30.0
     - typer >=0.7.0, <0.8.0
+    - coloredlogs
 
 test:
   imports:
