@@ -19,13 +19,14 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9, <4.0
+    - poetry
+    - poetry-core
     - pip
   run:
-    - python >=3.6
-    - cython
-    - coloredlogs
-    - typer
+    - python >=3.9, <4.0
+    - cython >=0.29.28, <0.30.0
+    - typer >=0.7.0, <0.8.0
 
 test:
   imports:
