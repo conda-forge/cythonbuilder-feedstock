@@ -1,5 +1,5 @@
 {% set name = "cythonbuilder" %}
-{% set version = "0.1.17" %}
+{% set version = "0.1.19" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cythonbuilder-{{ version }}.tar.gz
-  sha256: d713066e7e2b124b954c73421cb8e80e6c88e0ac388a51f39438184110b4e777
+  sha256: ecaf7c98f743a4e2831d893d550400e32cbac3f964b8ea3e3a37f80350d707d2
 
 build:
   noarch: python
