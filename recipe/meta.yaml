@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cythonbuilder-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cythonbuilder-{{ version }}.tar.gz
   sha256: 5121abc6643746c62bf256f5068b378b0f29301343a5ce9fedd74f1cd8f6724e
 
 build:
@@ -15,16 +15,16 @@ build:
     - cythonbuilder=cythonbuilder.cli:app
     - cybuilder=cythonbuilder.cli:app
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9, <4.0
+    - python {{ python_min }}
     - poetry
     - poetry-core
     - pip
   run:
-    - python >=3.9, <4.0
+    - python >={{ python_min }},<4.0
     - cython >=0.29.28, <0.30.0
     - typer >=0.7.0, <0.8.0
     - coloredlogs
@@ -38,6 +38,7 @@ test:
     - cybuilder --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/mike-huls/cythonbuilder
