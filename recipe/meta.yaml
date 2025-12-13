@@ -1,5 +1,5 @@
 {% set name = "cythonbuilder" %}
-{% set version = "0.1.22" %}
+{% set version = "0.1.24" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cythonbuilder-{{ version }}.tar.gz
-  sha256: 5121abc6643746c62bf256f5068b378b0f29301343a5ce9fedd74f1cd8f6724e
+  sha256: d740d7efbc4f8f0612e64dfadf1a4e99a7031a43dbecfa6de054ffaaef1fbc92
 
 build:
   noarch: python
@@ -15,7 +15,7 @@ build:
     - cythonbuilder=cythonbuilder.cli:app
     - cybuilder=cythonbuilder.cli:app
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
