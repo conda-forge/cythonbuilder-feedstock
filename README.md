@@ -1,7 +1,7 @@
 About cythonbuilder-feedstock
 =============================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cythonbuilder-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cythonbuilder-fix-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/mike-huls/cythonbuilder
 
@@ -17,8 +17,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18740&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cythonbuilder-feedstock?branchName=main">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cythonbuilder-fix-feedstock?branchName=main">
       </a>
     </td>
   </tr>
