@@ -15,7 +15,7 @@ source:
 build:
   number: 2
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
       - cythonbuilder=cythonbuilder.cli:app
@@ -27,10 +27,12 @@ requirements:
     - poetry
     - poetry-core
     - pip
+    - setuptools
   run:
     - python >=${{ python_min }},<4.0
-    - cython >=0.29.28, <0.30.0
-    - typer >=0.7.0, <0.8.0
+    - cython >=0.29.28,<0.30.0
+    - typer >=0.7.0,<0.8.0
+    - click <8.2
     - coloredlogs
 
 tests:
